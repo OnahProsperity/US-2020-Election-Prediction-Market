@@ -8,6 +8,7 @@ const SIDE = {
 };
 
 function App() {
+
   // const [web3, setWeb3] = useState(undefined);
   const [predictionMarket, setPredictionMarket] = useState(undefined);
   const [betPredictions, setBetPredictions] = useState(undefined);
@@ -19,6 +20,7 @@ function App() {
       const bets = await Promise.all([
         predictionMarket.bets(SIDE.BIDEN),
         predictionMarket.bets(SIDE.TRUMP)
+
       ]);
       const betPredictions = {
         labels: [
@@ -54,7 +56,7 @@ function App() {
     || typeof betPredictions === 'undefined'
     || typeof myBets === 'undefined'
   ) {
-    return 'Loading...';
+    return 'Loading... Connecting to your wallet. Kindly install Metamask for your browser';
   }
 
   const placeBet = async (side, e) => {
@@ -78,7 +80,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-        <img src='./img/favicon.png' width="45" height="45" className="d-inline-block align-top"/>
+        <img src='./img/favicon.png' width="45" height="45" className="d-inline-block align-top" alt="" />
         &nbsp; USA Prediction Market
         </a>          
       </nav>
@@ -97,7 +99,7 @@ function App() {
       <div className='row'>
         <div className='col-sm-6'>
           <div className="card">
-            <img src='./img/TRUMP.png' roundedCircle />
+            <img src='./img/TRUMP.png' roundedCircle alt="" />
             <div className="card-body">
               <h5 className="card-title">Trump</h5>
               <form className="form-inline" onSubmit={e => placeBet(SIDE.TRUMP, e)}>
@@ -118,7 +120,7 @@ function App() {
         </div>
         <div className='col-sm-6'>
           <div className="card">
-            <img src='./img/BIDEN.png' roundedCircle />
+            <img src='./img/BIDEN.png' roundedCircle alt="" />
             <div className="card-body">
               <h5 className="card-title">Biden</h5>
               <form className="form-inline" onSubmit={e => placeBet(SIDE.BIDEN, e)}>

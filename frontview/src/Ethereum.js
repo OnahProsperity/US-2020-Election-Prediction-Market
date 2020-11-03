@@ -23,7 +23,7 @@ const getBlockchain = () =>
 					);
 				resolve({signerAddress, predictionMarket});
 			}
-		});
+  		});
 	})
 
 
