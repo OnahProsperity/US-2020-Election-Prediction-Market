@@ -4,6 +4,10 @@
   "description": "Decentralized Social Media",
   "author": "Dapp University",
   "homepage": ".",
+  "engines": {
+    "npm": "6.14.8",
+    "node": "12.18.3"
+  },
   "dependencies": {
     "@truffle/hdwallet-provider": "^1.1.0",
     "babel-polyfill": "6.26.0",
