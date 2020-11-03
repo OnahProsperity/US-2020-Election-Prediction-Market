@@ -54,6 +54,15 @@ module.exports = {
       port: 7545,            // Standard Ethereum port (default: none)
       network_id: "*",       // Any network (default: none)
      },
+
+      /* ropsten: {
+        provider: function() {
+        return new HDWalletProvider(cage depth depend alley usual fade verify arrive foot egg chest you, "https://ropsten.infura.io/v3/962b5203218a4614b9f2fcdd5be1b013")
+      },
+      gas: 5000000,
+      gasPrice: 25000000000,
+      network_id: 3
+    }*/
     // Another network with more advanced options...
     // advanced: {
     // port: 8777,             // Custom port
@@ -66,13 +75,14 @@ module.exports = {
     // Useful for deploying to a public network.
     // NB: It's important to wrap the provider as a function.
     ropsten: {
-    provider: () => new HDWalletProvider(mnemonic, `https://ropsten.infura.io/v3/${projectId}`),
-    network_id: 3,       // Ropsten's id
-    gasPrice: 75000000000,        // Ropsten has a lower block limit than mainnet
-   
+    provider: () => new HDWalletProvider(cage depth depend alley usual fade verify arrive foot egg chest you, "https://ropsten.infura.io/v3/962b5203218a4614b9f2fcdd5be1b013"),
+    gasPrice: 25000000000,        // Ropsten has a lower block limit than mainnet
+    gas: 5000000,
+     network_id: 3,       // Ropsten's id
+     /*
     confirmations: 2,    // # of confs to wait between deployments. (default: 0)
     timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
-    skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
+    skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )*/
     },
     // Useful for private networks
     // private: {
